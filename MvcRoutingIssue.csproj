@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	  <TargetFramework>netcoreapp2.2</TargetFramework>
+	  <EnableDefaultContentItems>false</EnableDefaultContentItems>
+    <AssemblyName>WebService</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>WebService</PackageId>
+    <RootNamespace>Demo.Mvc</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.1.2" />
+    
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="2.0.1" />
+
+    <PackageReference Include="System.Xml.XmlSerializer" Version="4.3.0" />
+    
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Include="wwwroot\**\*" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="Views\**\*" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="node_modules\**\*" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
