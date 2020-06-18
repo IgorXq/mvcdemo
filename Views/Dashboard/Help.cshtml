@@ -26,9 +26,14 @@
         <a class="navbar-brand active" asp-action="Same" asp-route-tenantId="@Model">Check this link, it is incorrect and leads to POST action</a>
     </nav>
     <nav class="navbar navbar-light bg-faded">
-        <a class="navbar-brand active" asp-action="Unique" asp-route-tenantId="@Model">Check this link, it is correct because there is no POST method</a>
+        <a class="navbar-brand " asp-action="Unique" asp-route-tenantId="@Model">Check this link, it is correct because there is no POST action</a>
     </nav>
-<hr />
+    <nav class="navbar navbar-light bg-faded">
+        <a class="navbar-brand " asp-action="ActionFirst" asp-route-tenantId="@Model">This link is correct because of route pattern, regardless of HttpPost action</a>
+    </nav>
+
+    
+    <hr />
 
 
 </body>

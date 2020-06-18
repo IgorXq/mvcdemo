@@ -71,6 +71,26 @@ namespace WebService.Controllers
             return Content($"Congrats, {tenantId} !");
         }
 
+        [HttpGet]
+        [Route("[controller]/actionfirst/{tenantId}")]
+
+        // This action has parameter at the end, so it will produce correct route
+        // regardless of POST action
+        public IActionResult ActionFirst(string tenantId)
+        {
+            return Content($"Congrats, {tenantId}, this route pattern produces the correct link !");
+        }
+
+        [HttpPost]
+        [Route("[controller]/actionfirst")]
+
+        // This action has parameter at the end, so it will produce correct route
+        // regardless of POST action
+        public IActionResult ActionFirst(DummyViewModel vm)
+        {
+            return Content($"This is POST action, but it is not an obstacle when the route pattern does not contain parameter at the middle");
+        }
+
 
 
         #endregion
